@@ -1,0 +1,44 @@
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after
+{
+    box-sizing: inherit;
+}
+
+body
+{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fuenteText);
+    transition: .5s;
+}
+
+img
+{
+    max-width: 100%;
+    display: block;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+li
+{
+    list-style: none;
+}
+
+h1,
+h2,
+p,
+ul
+{
+    padding: 0;
+    margin: 0;
+}

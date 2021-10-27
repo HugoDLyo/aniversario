@@ -1,0 +1,95 @@
+/* =====BARRA LATERAL MENU===== */
+.barra
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $widthNav;
+    height: 100vh;
+    color: var(--negro);
+    padding: .5rem;
+    transition: .5s;
+    z-index: 100;
+    @include windowsRight;
+
+    @include rwd(l) {
+      width: $widthNav + 1rem;
+    }
+}
+
+.barra__nav
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.barra__nav-brand
+{
+    visibility: hidden;
+    
+    @include rwd(l) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        visibility: visible;
+    }
+}
+
+.nav__toggle
+{
+    width: 5rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.nav__logo
+{
+    color: var(--negro);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.nav__link
+{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 1rem;
+    color: var(--negro);
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    border: .1rem solid transparent;
+
+    &:hover {
+      @include windowsComplete;
+    }
+}
+
+.nav__icon
+{
+    width: 2rem;
+
+    @include rwd(l) {
+        width: 3rem;
+    }
+}
+
+.nav__name
+{
+    font-size: 1.5rem;
+}
+
+.expander
+{
+    width: $widthNav + 12rem;
+}

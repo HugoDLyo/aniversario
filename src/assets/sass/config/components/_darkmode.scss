@@ -1,0 +1,22 @@
+.dark
+{
+  background-color: var(--negro);
+
+  p,
+  a {
+    color: var(--blanco)
+  }
+
+  .icons {
+    filter: invert(100%)
+  }
+
+  .barra {
+    @include windowsRightDark;
+  }
+  .nav__link {
+    &:hover {
+      @include windowsCompleteDark;
+    }
+  }
+}

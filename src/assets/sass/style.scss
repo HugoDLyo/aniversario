@@ -1,0 +1,15 @@
+//* Globales
+@import 'src/assets/sass/config/utils/normalize';
+@import 'src/assets/sass/config/utils/variables';
+@import 'src/assets/sass/config/utils/maps';
+@import 'src/assets/sass/config/utils/mixins';
+@import 'src/assets/sass/config/utils/functions';
+
+//* Componentes
+@import 'src/assets/sass/config/components/darkmode';
+@import 'src/assets/sass/config/components/generales';
+
+//* Layout
+@import 'src/assets/sass/config/layout/header';
+
+//* Páginas

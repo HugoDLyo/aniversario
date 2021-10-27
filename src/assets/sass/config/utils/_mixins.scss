@@ -1,0 +1,44 @@
+@mixin rwd($bp) {
+    @if map-has-key($breakpoints, $bp){
+        @media screen and (min-width: map-get($breakpoints, $bp)) {
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: $bp) {
+            @content
+        }
+    }
+}
+
+@mixin windowsRight() {
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    border-right: .1rem solid rgba(0, 0, 0, .5);
+}
+@mixin windowsComplete() {
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    border: .1rem solid rgba(0, 0, 0, .5);
+}
+
+@mixin windowsRightDark() {
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(20px);
+    border-right: .1rem solid rgba(255, 255, 255, .5);
+}
+@mixin windowsCompleteDark() {
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(20px);
+    border: .1rem solid rgba(255, 255, 255, .5);
+}
+
+@mixin neuformismo {
+    background: linear-gradient(145deg, #e3e3e3, #ffffff);
+    box-shadow:  20px 20px 60px #d6d6d6,
+                -20px -20px 60px #ffffff;
+}
+@mixin neuformismoDark {
+    background: linear-gradient(145deg, #222222, #292929);
+    box-shadow:  20px 20px 60px #202020,
+                -20px -20px 60px #2c2c2c;
+}

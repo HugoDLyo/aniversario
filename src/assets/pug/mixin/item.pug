@@ -1,0 +1,4 @@
+mixin item(href, img, alt, text)
+  a(href= href).nav__link
+    img(src=`${paths.icon}${img}`, alt= alt).nav__icon.icons
+    span.nav__name= text

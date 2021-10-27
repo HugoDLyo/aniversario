@@ -1,9 +1,9 @@
 .hero#hero
   .hero__images
     picture
-      source(srcset="images/nosotros.avif", typed="image/avif")
-      source(srcset="images/nosotros.webp", typed="image/webp")
-      source(srcset="images/nosotros.jpeg", typed="image/jpeg")
+      source(srcset=`${paths.img}nosotros.avif`, typed="image/avif")
+      source(srcset=`${paths.img}nosotros.webp`, typed="image/webp")
+      source(srcset=`${paths.img}nosotros.jpeg`, typed="image/jpeg")
       img(loading="lazy", src=`${paths.img}nosotros.jpg`, alt="foto_hugo&yuli")
   .hero__text
     h1.hero__title Hugo & Yuli

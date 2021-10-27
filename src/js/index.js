@@ -21,8 +21,8 @@ const showMenu = (toogleId, navbarId) => {
 // const pathMoon = '/src/assets/img/icon/moon-solid.svg';
 // const pathSun = '/src/assets/img/icon/sun-solid.svg';
 
-const pathMoon = 'public/assets/imagen/icon/moon-solid.svg';
-const pathSun = 'public/assets/imagen/icon/sun-solid.svg';
+const pathMoon = 'public/assets/imagen/img-vector/icon/moon-solid.svg';
+const pathSun = 'public/assets/imagen/img-vector/icon/sun-solid.svg';
 
 function darkMode() {
   const toggleTheme = document.getElementById('toggle-theme');

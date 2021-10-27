@@ -68,32 +68,44 @@ function deployJavascript() {
 }
 
 function deployImage() {
-  return src('src/assets/img/*')
+  return src('src/assets/media/img/*')
     .pipe(imagenmin())
-    .pipe(dest('public/assets/imagen/'))
+    .pipe(dest('public/assets/media/imagen/'))
 }
-function deployImageIcon() {
-  return src('src/assets/img/icon/*')
+function deployImageWebp() {
+  return src('public/assets/media/imagen/*')
+  .pipe(webp())
+  .pipe(dest('public/assets/media/imagen/'))
+}
+function deployImageAvif() {
+  return src('public/assets/media/imagen/*')
+  .pipe(avif())
+  .pipe(dest('public/assets/media/imagen/'))
+}
+
+function deployImageGallery() {
+  return src('src/assets/media/img-gallery/*')
     .pipe(imagenmin())
-    .pipe(dest('public/assets/imagen/icon/'))
+    .pipe(dest('public/assets/media/gallery/'))
+}
+function deployImageGalleryWebp() {
+  return src('public/assets/media/gallery/*')
+    .pipe(imagenmin())
+    .pipe(dest('public/assets/media/gallery/'))
+}
+
+function deployImageIcon() {
+  return src('src/assets/media/img-vector/img-icon/*')
+    .pipe(imagenmin())
+    .pipe(dest('public/assets/media/img-vector/icon/'))
 }
 function deployImageFavicon() {
-  return src('src/assets/img/favicon/*')
+  return src('src/assets/media/img-vector/img-favicon/*')
     .pipe(imagenmin())
-    .pipe(dest('public/assets/imagen/favicon/'))
+    .pipe(dest('public/assets/media/img-vector/favicon/'))
 }
-
-function deployImageWebp() {
-  return src('public/assets/imagen/*')
-    .pipe(webp())
-    .pipe(dest('public/assets/imagen/'))
-}
-
-function deployImageAvif() {
-  return src('public/assets/imagen/*')
-    .pipe(avif())
-    .pipe(dest('public/assets/imagen/'))
-}
-
 exports.deployFile = series(deployConvertPug, deployScss, deployJavascript);
-exports.deployImage = series(deployImage, deployImageAvif, deployImageWebp, deployImageFavicon, deployImageIcon);
+exports.deployImagenes = series(deployImage, deployImageAvif, deployImageWebp);
+exports.deployImageFavicon = deployImageFavicon
+exports.deployImageIcon = deployImageIcon
+exports.deployGaleria = series(deployImageGallery, deployImageGalleryWebp);

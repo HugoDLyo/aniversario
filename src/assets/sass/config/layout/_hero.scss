@@ -1,0 +1,58 @@
+/* =====HERO===== */
+.hero
+{
+  display: grid;
+
+  @include rwd(m) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@include rwd(l) {
+  .hero__images img {
+    height: 66rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero__text
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  font-family: var(--fuenteHeading);
+  
+  @include rwd(m) {
+    padding-top: 0;
+    row-gap: 2rem;
+  }
+}
+
+.hero__title
+{
+  @include rwd(m) {
+    font-size: 4rem;
+  }
+  @include rwd(l) {
+    font-size: 6rem;
+  }
+}
+
+.hero__subtitle
+{
+  @include rwd(m) {
+    font-size: 2.2rem;
+  }
+}
+
+.name
+{
+  color: var(--color-cuarto);
+
+  @include rwd(l) {
+    font-size: 2.5rem;
+  }
+}

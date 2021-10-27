@@ -95,4 +95,5 @@ function deployImageAvif() {
     .pipe(dest('public/assets/imagen/'))
 }
 
-exports.deployFile = series(deployConvertPug, deployScss, deployJavascript, deployImage, deployImageIcon, deployImageFavicon, deployImageWebp, deployImageAvif);
+exports.deployFile = series(deployConvertPug, deployScss, deployJavascript);
+exports.deployImage = series(deployImage, deployImageAvif, deployImageWebp, deployImageFavicon, deployImageIcon);

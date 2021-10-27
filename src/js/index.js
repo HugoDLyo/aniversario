@@ -40,3 +40,33 @@ function darkMode() {
     }
   });
 };
+
+//* =====Texto Cambiante=====
+const typed = new Typed('.typed', {
+  strings: [
+    '<i class="name">Gracias por ser mi Novia</i>', 
+    '<i class="name">Gracias por ser mi Cómplice</i>', 
+    '<i class="name">Gracias por ser mi Mujer</i>', 
+    '<i class="name">Gracias por ser mi Prometida</i>', 
+    '<i class="name">Gracias por ser Única</i>',
+    '<i class="name">Gracias por ser Dedicada</i>', 
+    '<i class="name">Gracias por ser Amorosa</i>', 
+    '<i class="name">Gracias por ser Leal</i>', 
+    '<i class="name">Gracias por ser Decidida</i>', 
+    '<i class="name">Gracias por ser Maravillosa</i>', 
+    '<i class="name">Gracias por ser Comprensiva</i>', 
+    '<i class="name">Gracias por hacerme Feliz</i>',
+    '<i class="name">Por eso y muchas cosas más…</i>', 
+    '<i class="name">TE AMO &#9829; &#9829; &#9829;</i>'
+  ],
+  typeSpeed: 75,
+	startDelay: 300,
+	backSpeed: 75,
+	shuffle: false,
+	backDelay: 1500,
+	loop: true,
+	loopCount: false,
+	showCursor: true,
+	cursorChar: '|',
+	contentType: 'html'
+});

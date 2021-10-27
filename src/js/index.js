@@ -18,6 +18,12 @@ const showMenu = (toogleId, navbarId) => {
 };
 
 //* =====Modo Oscuro=====
+// const pathMoon = '/src/assets/img/icon/moon-solid.svg';
+// const pathSun = '/src/assets/img/icon/sun-solid.svg';
+
+const pathMoon = 'public/assets/imagen/icon/moon-solid.svg';
+const pathSun = 'public/assets/imagen/icon/sun-solid.svg';
+
 function darkMode() {
   const toggleTheme = document.getElementById('toggle-theme');
   const toggleIcon = document.getElementById('toggle-icon');
@@ -26,10 +32,10 @@ function darkMode() {
   toggleTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     if (toggleIcon.src.includes('moon-solid.svg')) {
-        toggleIcon.src='/src/assets/img/icon/sun-solid.svg'
+        toggleIcon.src= pathSun
         toggleText.textContent='Ligth Mode'
     } else {
-        toggleIcon.src='/src/assets/img/icon/moon-solid.svg'
+        toggleIcon.src= pathMoon
         toggleText.textContent='Dark Mode'
     }
   });

@@ -105,7 +105,9 @@ function deployImageFavicon() {
     .pipe(dest('public/assets/media/img-vector/favicon/'))
 }
 exports.deployFile = series(deployConvertPug, deployScss, deployJavascript);
-exports.deployImagenes = series(deployImage, deployImageAvif, deployImageWebp);
+exports.deployImage = deployImage
+exports.deployImageAvif = deployImageAvif
+exports.deployImageWebp = deployImageWebp
 exports.deployImageFavicon = deployImageFavicon
 exports.deployImageIcon = deployImageIcon
 exports.deployGaleria = series(deployImageGallery, deployImageGalleryWebp);

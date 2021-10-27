@@ -3,7 +3,11 @@
   background-color: var(--negro);
 
   h1,
+  h2,
+  h3,
+  h4,
   p,
+  li,
   a {
     color: var(--blanco)
   }
@@ -15,9 +19,18 @@
   .barra {
     @include windowsRightDark;
   }
+  
   .nav__link {
     &:hover {
       @include windowsCompleteDark;
     }
+  }
+
+  .banner {
+    background-image: img('sky_night.jpg');
+  }
+
+  .box {
+    @include neuformismoDark;
   }
 }

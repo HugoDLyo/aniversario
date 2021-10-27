@@ -1,0 +1,37 @@
+.box
+  .box__buttom
+    ul.wow.animate__animated.animate__fadeInLeft
+      +btnTabActivo('Cartas', 'letters.html')
+      +btnTab('Galería', 'gallery.html')
+      +btnTab('Anecdotario', 'anecdotal.html')
+  .box__content
+    .box__context.activo.wow.animate__animated.animate__fadeInRight
+      .box__img
+        picture
+          source(srcset=`${paths.img}carta.avif`, typed="image/avif")
+          source(srcset=`${paths.img}carta.webp`, typed="image/webp")
+          source(srcset=`${paths.img}carta.jpeg`, typed="image/jpeg")
+          img(loading="lazy", src=`${paths.img}carta.jpg`, alt="foto-nosotros")
+      .box__text
+        p Cartas
+        p Aquí podrás encontrar todas esas cartas que por alguna u otra razón no te he podido dar en persona o aquellas qme has pedido que te escriba aquí estarán para cuando gustes verlas y leerlas.
+    .box__context
+      .box__img
+        picture
+          source(srcset=`${paths.img}galeria.avif`, typed="image/avif")
+          source(srcset=`${paths.img}galeria.webp`, typed="image/webp")
+          source(srcset=`${paths.img}galeria.jpeg`, typed="image/jpeg")
+          img(loading="lazy", src=`${paths.img}galeria.jpg`, alt="foto-nosotros")
+      .box__text
+        p Galería
+        p Nuestra propia galería de amor, donde encontraras la mayoría de las fotos que nos hemos tomada en esas salidas espontaneas y planeadas para recordar cada uno de esos días.
+    .box__context
+      .box__img
+        picture
+          source(srcset=`${paths.img}anecdotario.avif`, typed="image/avif")
+          source(srcset=`${paths.img}anecdotario.webp`, typed="image/webp")
+          source(srcset=`${paths.img}anecdotario.jpeg`, typed="image/jpeg")
+          img(loading="lazy", src=`${paths.img}anecdotario.jpg`, alt="foto-nosotros")
+      .box__text
+        p Anecdotario
+        p Creo la parte más complicada de las tres, ya que aquí será nuestro diario personal anotando esas salidas o momentos que más nos marquen y queramos guardar, para que el día de mañana regresemos a verlo.

@@ -1,0 +1,65 @@
+/* =====BANNER===== */
+.banner
+{
+    width: 100%;
+    text-align: center;
+    background-image: img('sky.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.banner__text
+{
+    font-size: 4rem;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    animation:  moveOne 15s infinite linear;
+    @include rwd(s) {
+        animation:  moveTwo 15s infinite linear;
+    }
+    @include rwd(m) {
+        animation:  moveThree 15s infinite linear;
+    }
+    @include rwd(l) {
+        animation:  moveFour 15s infinite linear;
+    }
+}
+
+@keyframes moveOne {
+    from {
+        left: 376px;
+    }
+    to {
+        left: -4800px;
+    }
+}
+@keyframes moveTwo {
+    from {
+        left: 768px;
+    }
+    to {
+        left: -4800px;
+    }
+}
+@keyframes moveThree{
+    from {
+        left: 1024px;
+    }
+    to {
+        left: -4800px;
+    }
+}
+@keyframes moveFour{
+    from {
+        left: 1280px;
+    }
+    to {
+        left: -4800px;
+    }
+}

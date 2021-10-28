@@ -1,0 +1,5 @@
+mixin download(doc, carta)
+  .enlaces
+    a(href=`${paths.doc}${doc}`, download): img(src=`${paths.icon}code-download-outline.svg`, alt="vector_download").enlaces__icon.icons
+    a(href= carta): img(src=`${paths.icon}chevron-up-circle-outline.svg`, alt="vector_up").enlaces__icon.icons
+    a(href="#cartas"): img(src=`${paths.icon}arrow-up-circle-outline.svg`, alt="vector_up").enlaces__icon.icons

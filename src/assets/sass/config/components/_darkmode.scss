@@ -42,4 +42,8 @@
       color: var(--negro);
     }
   }
+
+  .carta::after {
+    background-color: var(--blanco);
+  }
 }

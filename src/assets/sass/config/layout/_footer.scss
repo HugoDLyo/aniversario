@@ -1,0 +1,57 @@
+/* =====FOOTER===== */
+.footer
+{
+    margin-top: 5rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.watch
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include rwd(l) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.watches__content
+{
+    display: flex;
+}
+
+.simply-section 
+{
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include rwd(s) {
+        width: 10rem;
+        margin: .5rem;
+    }
+}
+
+.simply-amount 
+{
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    @include rwd(s) {
+        font-size: 2.5rem;
+    }
+}
+
+.simply-word 
+{
+    font-size: 1.2rem;
+    @include rwd(s) {
+        font-size: 2rem;
+    }
+}

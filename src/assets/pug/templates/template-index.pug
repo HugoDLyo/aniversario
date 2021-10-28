@@ -54,8 +54,12 @@ html(lang="es")
         block hero
         main
           block main
+        footer.footer
+          block footer
         
         script(src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12")
         script(src=`${paths.js}`)
         script(src=`${paths.script}wow.min.js`) 
         script new WOW().init();
+        script(src=`${paths.script}simplyCountdown.min.js`)     
+        script(src=`${paths.script}time.js`)

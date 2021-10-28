@@ -33,4 +33,13 @@
   .box {
     @include neuformismoDark;
   }
+
+  .footer {
+    background-color: var(--blanco);
+    color: var(--negro);
+
+    h3 {
+      color: var(--negro);
+    }
+  }
 }

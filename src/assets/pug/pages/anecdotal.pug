@@ -1,0 +1,19 @@
+extends ../templates/template-page
+block titleHead
+  title=`${names.anecdotal} - Hugo & Yuli`
+block main
+  .wrapper
+    h2.center.title Anecdotario
+    .anecdotario
+      section.anecdotario__date
+        +anecdotario('Octubre 2020', 'note-one.html', '17/Octubre/2020')
+        +anecdotarioDouble('Enero 2021', 'note-two.html', 'note-three.html', '06/Enero/2021', '16/Enero/2021')
+        +anecdotario('Febrero 2021', 'note-four.html', '13/Febrero/2021')
+        +anecdotarioDouble('Agosto 2021', 'note-five.html', 'note-six.html', '21/Agosto/2021', '28/Agosto/2021')
+        h3: a(href="#").link Crea tu Propia Entrada 
+      section.anecdotario__img
+        .anecdotario__images
+          img(src=`${paths.img}undraw_book_lover_mkck.svg`, alt="vector_chica_leyendo")
+
+block prepend scripts
+  script(src=`${paths.script}acordeon.js`)

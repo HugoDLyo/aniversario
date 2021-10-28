@@ -1,0 +1,15 @@
+extends ../templates/template-note
+block titleHead
+  title=`notaUno - Hugo & Yuli`
+block note
+  .wrapper
+    .note
+      +note('Juntos otra Vez', 'nota1.jpg')
+      .note__content
+        ul
+          li
+            p #[span Fecha: ]17/Octubre/2020
+            p #[span Lugar: ]Bellas Artes (Barrio Chino)
+            p "Después de casi medio año de no verla físicamente volví a ver a mi linda novia y fue maravilloso comer con ella, platicar y caminar de nuevo juntos mi cielo #[strong TE AMO MUCHO] no sabes lo mucho que te extraño y lo mucho que me haces falta corazón mío"
+            .note__icon
+              +btnNote('note-six.html', 'note-two.html')

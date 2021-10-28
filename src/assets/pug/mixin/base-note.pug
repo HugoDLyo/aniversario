@@ -1,0 +1,9 @@
+mixin note(title, src)
+  .note__title
+    h2= title
+  .note__images
+    picture
+      source(srcset=`${paths.img}${src}`, typed="image/avif")
+      source(srcset=`${paths.img}${src}`, typed="image/webp")
+      source(srcset=`${paths.img}${src}`, typed="image/jpeg")
+      img(src=`${paths.img}${src}`, alt="foto_de_nosotros", loading="lazy")

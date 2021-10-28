@@ -1,0 +1,90 @@
+/* =====NOTE===== */
+.body--note
+{
+  background-color: var(--bg-nota);
+  color: var(--color-nota);
+}
+
+.note
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 2rem 0 0 0;
+
+  @include rwd(m) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem min-content;
+    gap: 2rem;
+  }
+}
+
+.note__title
+{
+  text-align: center;
+
+  @include rwd(m) {
+    grid-column: span 2;
+  }
+
+  h2 {
+    font-family: var(--fuenteHeading);
+    font-size: 3rem;
+
+    @include rwd(m) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.note__images
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt--img
+{
+  width: 80%;
+
+  @include rwd(m) {
+    width: 50%;
+  }
+}
+
+.note__content
+{
+  text-align: center;
+
+  p {
+    padding-bottom: 1rem;
+
+    @include rwd(m) {
+      padding-bottom: 2.2rem;
+    }
+  }
+
+  span {
+    font-family: var(--fuenteHeading);
+  }
+
+  strong {
+    color: var(--color-segundo);
+  }
+}
+
+.note__icon
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+
+  img {
+    width: 4rem;
+  }
+}

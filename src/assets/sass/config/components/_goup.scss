@@ -1,0 +1,60 @@
+.goup
+{
+  display: none;
+    
+  @include rwd(l) {
+    display: flex;
+    position: fixed;
+    bottom: .2rem;
+    right: .2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.goup__icon
+{
+  width: 0rem;
+  height: 0rem;
+  border-radius: 50%;
+  background: #008080;
+  box-shadow: inset -5px -5px 10px #003333, 
+              inset 5px 5px 10px #00cdcd;
+  -webkit-box-shadow: -2px -3px 17px 3px #551A8B; 
+  box-shadow: -2px -3px 17px 3px #551A8B;
+  transition: .2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.show
+{
+  z-index: 10;
+
+  & .goup__icon {
+    animation: popup .3s ease-in-out;
+    width: 4rem;
+    height: 4rem;
+    z-index: 10;
+
+    @keyframes popup {
+      0%{
+        width: 0rem;
+        height: 0rem;
+      }
+      50%{
+        width: 6rem;
+        height: 6rem;
+      }
+      100%{
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}

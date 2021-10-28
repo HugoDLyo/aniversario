@@ -90,7 +90,7 @@ function deployImageGallery() {
 }
 function deployImageGalleryWebp() {
   return src('public/assets/media/gallery/*')
-    .pipe(imagenmin())
+    .pipe(webp())
     .pipe(dest('public/assets/media/gallery/'))
 }
 

@@ -46,4 +46,18 @@
   .carta::after {
     background-color: var(--blanco);
   }
+
+  .galeria__img {
+    outline: 1px solid var(--blanco);
+  }
+  .galeria__contenido {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .galeria__icon {
+    filter: invert(0);
+  }
+  .galeria__copy {
+    color: var(--negro);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
 }

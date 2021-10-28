@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   darkMode();
   showMenu('nav__toggle', 'barra');
   multimediaTabs();
+  lightBox();
 });
 
 //* =====Abrir y Cerrar el Menu=====
@@ -86,4 +87,31 @@ function multimediaTabs() {
           bloque[i].classList.add('activo')
       })
   });
+};
+
+//* =====Galeria=====
+function lightBox() {
+  const images = document.querySelectorAll('.galeria__img');
+  const containerImages = document.querySelector('.galeria__contenido');
+  const imageContainer = document.querySelector('.galeria__show');
+  const copy = document.querySelector('.galeria__copy');
+  const closeModal = document.querySelector('.galeria__icon');
+  
+  images.forEach(image =>{
+    image.addEventListener('click', ()=>{
+      addImage(image.getAttribute('src'),image.getAttribute('alt'));
+    })
+  })
+  
+  const addImage = (srcImage, altImage)=>{
+    containerImages.classList.toggle('mover');
+    imageContainer.classList.toggle('show');
+    imageContainer.src = srcImage;
+    copy.innerHTML = altImage;
+  }
+  
+  closeModal.addEventListener('click', ()=>{
+    containerImages.classList.toggle('mover');
+    imageContainer.classList.toggle('show');
+  })
 };

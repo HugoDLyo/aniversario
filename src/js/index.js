@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   darkMode();
   showMenu('nav__toggle', 'barra');
-  
+  multimediaTabs();
 });
 
 //* =====Abrir y Cerrar el Menu=====

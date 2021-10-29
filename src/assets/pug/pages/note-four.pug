@@ -1,0 +1,15 @@
+extends ../templates/template-note
+block titleHead
+  title=`notaCuatro - Hugo & Yuli`
+block note
+  .wrapper
+    .note
+      +note('Día del Amor y la Amistad', 'nota4.jpg')
+      .note__content
+        ul
+          li
+            p #[span Fecha: ]13/Febrero/2021
+            p #[span Lugar: ]Polanco (Chez Vous-Cafetería)
+            p "Hemos pasado ya varios 14 juntos mi amor, pero en realidad este tuvo algo diferente algo especial y hermoso, no se si por lo que estamos viviendo o por la promesa que te hice pero en verdad, disfrute este día como no tienes una idea #[strong TE AMO MUCHUSIMO] mi hermosa novia, gracias por tan maravilloso día."
+            .note__icon
+              +btnNote('note-three.html', 'note-five.html')

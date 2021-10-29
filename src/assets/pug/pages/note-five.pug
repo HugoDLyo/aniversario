@@ -1,0 +1,15 @@
+extends ../templates/template-note
+block titleHead
+  title=`notaCinco - Hugo & Yuli`
+block note
+  .wrapper
+    .note
+      +noteVertical('Cumpleaños de Valecito', 'nota5.jpg')
+      .note__content
+        ul
+          li
+            p #[span Fecha: ]21/Agosto/2021
+            p #[span Lugar: ]Mi Casa
+            p "Tenemos momentos divertidos como este en el que convives con mi familia y nos divertimos al máximo, aquí en el cumple de mi hermano, gracias por estar conmigo #[strong TE AMO]."
+            .note__icon
+              +btnNote('note-four.html', 'note-six.html')

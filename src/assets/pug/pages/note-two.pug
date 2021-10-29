@@ -1,0 +1,15 @@
+extends ../templates/template-note
+block titleHead
+  title=`notaDos - Hugo & Yuli`
+block note
+  .wrapper
+    .note
+      +note('Primer Salida 2021', 'nota2.jpg')
+      .note__content
+        ul
+          li
+            p #[span Fecha: ]06/Enero/2021
+            p #[span Lugar: ]Coyoacán
+            p "Aunque han sido meses difíciles y de vernos y no vernos, aun así nos hemos hecho espacios mutuamente para estar juntos, ya sea ir a caminar o simplemente decirnos un #[strong TE AMO MUCHO] y esta fue nuestra primer salida de esta año en curso y obvio vendrán más o no?? mi hermosa novia"
+            .note__icon
+              +btnNote('note-one.html', 'note-three.html')

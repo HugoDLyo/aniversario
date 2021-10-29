@@ -1,0 +1,15 @@
+extends ../templates/template-note
+block titleHead
+  title=`notaSeis - Hugo & Yuli`
+block note
+  .wrapper
+    .note
+      +note('Salida a Chapultepec', 'nota6.jpg')
+      .note__content
+        ul
+          li
+            p #[span Fecha: ]28/Agosto/2021
+            p #[span Lugar: ]Chapultepec
+            p "Lo que no había pasado y fue muy agradable, divertido y hasta curioso tener la primer convivencia con los amigos de mi novia, que vengan más días así a tu lado #[strong TE AMO] mi novia hermosa."
+            .note__icon
+              +btnNote('note-five.html', 'note-one.html')
